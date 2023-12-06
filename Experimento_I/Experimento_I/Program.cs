@@ -31,31 +31,6 @@ namespace Experimento_I
                 y += 6;
             }
         }
-        public static void TercerPantalla(string opcion)
-        {
-            DibujarInterfaz();
-            switch (opcion)
-            {
-                case "playstation":
-                    Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    //EscribirItems(psp);
-                    Console.SetCursorPosition(160, 4);
-                    break;
-                case "xbox":
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    //EscribirItems(xbox);
-                    break;
-                case "nintendo":
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    //EscribirItems(nin);
-                    break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("No existe esa opcion");
-                    break;
-            }
-            Console.ReadKey();
-        }
         public static void DibujarInterfaz()
         {
             Cuadrados marcoDeLaVentana = new Cuadrados(new Point(2, 2), new Point(174, 50));
@@ -94,7 +69,7 @@ namespace Experimento_I
             Console.ResetColor();
             
         }
-        public static void Mainor()
+        public static void Main()
         {
             List<ConsolasDeMesa> productos = new List<ConsolasDeMesa>();
             string[] psp = { "PlayStation 1", "PlayStation 2", "PlayStation 3", "PlayStation 4", "PlayStation Vita", "PlayStation Vita Slim", "PlayStation PSP", "PSPP" };
@@ -122,8 +97,31 @@ namespace Experimento_I
             EscribirContenido();
             opcion = Console.ReadLine().ToLower();
             Console.Clear();
-            
-            
+/*******************************************Tercera Pantalla**********************************************************/
+            DibujarInterfaz();
+            switch (opcion)
+            {
+                case "playstation":
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    //EscribirItems(psp);
+                    Console.SetCursorPosition(160, 4);
+                    break;
+                case "xbox":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    //EscribirItems(xbox);
+                    break;
+                case "nintendo":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    //EscribirItems(nin);
+                    break;
+                default:
+                    Console.Clear();
+                    Console.WriteLine("No existe esa opcion");
+                    break;
+            }
+            Console.ReadKey();
+
+
         }
     }
 }
