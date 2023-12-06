@@ -1,0 +1,14 @@
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\bin\Debug\net8.0\Experimento_I.exe
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\bin\Debug\net8.0\Experimento_I.deps.json
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\bin\Debug\net8.0\Experimento_I.runtimeconfig.json
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\bin\Debug\net8.0\Experimento_I.dll
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\bin\Debug\net8.0\Experimento_I.pdb
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\Experimento_I.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\Experimento_I.AssemblyInfoInputs.cache
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\Experimento_I.AssemblyInfo.cs
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\Experimento_I.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\Experimento_I.dll
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\refint\Experimento_I.dll
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\Experimento_I.pdb
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\Experimento_I.genruntimeconfig.cache
+C:\Users\steve\OneDrive\Escritorio\Experimento_I\Experimento_I\obj\Debug\net8.0\ref\Experimento_I.dll
