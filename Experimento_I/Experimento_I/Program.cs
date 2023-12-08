@@ -43,19 +43,42 @@ namespace ExperimentoIII
            ConsolaDeMesa xboxOneXS = new ConsolaDeMesa("Xbox One X Slim", 499);
        
             ProductoXbox.Add(xbox);
-              ProductoXbox.Add(xbox360);
-               ProductoXbox.Add(xbox360A);
-              ProductoXbox.Add(xboxOne);
-             ProductoXbox.Add(xboxSeriesX);
-              ProductoXbox.Add(xboxSeriesS);
-              ProductoXbox.Add(xboxSOneX);
-             ProductoXbox.Add(xboxOneXS);
+            ProductoXbox.Add(xbox360);
+            ProductoXbox.Add(xbox360A);
+            ProductoXbox.Add(xboxOne);
+            ProductoXbox.Add(xboxSeriesX);
+            ProductoXbox.Add(xboxSeriesS);
+            ProductoXbox.Add(xboxSOneX);
+            ProductoXbox.Add(xboxOneXS);
 
              
 
 
             return ProductoXbox;
         }
+
+        public static List<ConsolaDeMesa> NintendoProductos()
+        {
+            List<ConsolaDeMesa> ProductoNintendo = new List<ConsolaDeMesa>();
+            
+            ConsolaDeMesa GameCube = new ConsolaDeMesa("Game Cube", 10);
+            ConsolaDeMesa superNintendo = new ConsolaDeMesa("Super Nintendo ", 20);
+            ConsolaDeMesa Nintendo64 = new ConsolaDeMesa("Nintendo 64", 30);
+            ConsolaDeMesa Wii= new ConsolaDeMesa("Wii", 60);
+            ConsolaDeMesa Ness= new ConsolaDeMesa("Ness", 90);
+            
+            ProductoNintendo.Add(GameCube);
+            ProductoNintendo.Add(superNintendo );  
+            ProductoNintendo.Add(Nintendo64); 
+            ProductoNintendo.Add(Wii);
+            ProductoNintendo.Add(Ness);
+          
+            return ProductoNintendo;
+        }
+
+            
+ 
+            
         public static void ConfigurarVentana(int ancho, int altura)
         {
             Ventana LongitudDeLaVentana = new Ventana(ancho, altura);
