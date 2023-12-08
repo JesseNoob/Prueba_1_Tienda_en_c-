@@ -8,7 +8,7 @@ namespace ExperimentoIII
     {
 
         public static string comandos;
-        public static List<ConsolaDeMesa> PlaysStationProducts()
+        public static List<ConsolaDeMesa> PS1productos()
         {
             List<ConsolaDeMesa> ProductoPS = new List<ConsolaDeMesa>();
             ConsolaDeMesa ps1 = new ConsolaDeMesa("PlayStation 1", 20);
@@ -17,7 +17,16 @@ namespace ExperimentoIII
             ConsolaDeMesa ps4 = new ConsolaDeMesa("PlayStation 1", 20);
             ConsolaDeMesa ps5 = new ConsolaDeMesa("PlayStation 1", 20);
             ConsolaDeMesa ps6 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps7 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps8 = new ConsolaDeMesa("PlayStation 1", 20);
             ProductoPS.Add(ps1);
+            ProductoPS.Add(ps2);
+            ProductoPS.Add(ps3);
+            ProductoPS.Add(ps4);
+            ProductoPS.Add(ps5);
+            ProductoPS.Add(ps6);
+            ProductoPS.Add(ps7);
+            ProductoPS.Add(ps8);
 
             return ProductoPS;
         }
@@ -92,25 +101,27 @@ namespace ExperimentoIII
             for (int i = 0; i < (items.Count / 2); i++)
             {
                 Console.SetCursorPosition(17, y);
-                Console.WriteLine((i + 1) + ") " + items[i].Nombre);
+                Console.WriteLine((i + 1) + ") " + items[i].Nombre + "Precio: " + items[i].Precio);
                 y += 6;
             }
             y = 12;
             for (int i = (items.Count / 2); i < items.Count; i++)
             {
                 Console.SetCursorPosition(97, y);
-                Console.WriteLine((i + 1) + ") " + items[i].Nombre);
+                Console.WriteLine((i + 1) + ") " + items[i].Nombre + "Precio: " + items[i].Precio);
                 y += 6;
             }
         }
         public static void Main()
         {
-            ConfigurarVentana(180, 52);
+            List<ConsolaDeMesa> productosDePlayStation = PS1productos();
+            ConfigurarVentana(100, 42);
             //DibujarPresentacion();
             //DibujarPrimerMenu();
             //DibujarSegundoMenu();
             //Console.Clear();
-            
+            EscribirItems(productosDePlayStation);
+           
             
             Console.ReadKey();
 
