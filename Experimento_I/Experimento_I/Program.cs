@@ -1,126 +1,118 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Experimento_III;
 using System.Drawing;
-//using Experimento_I;
-namespace Experimento_I
+using System.IO;
+using System.Collections.Generic;
+namespace ExperimentoIII
 {
     class Principal
     {
 
-        public static void EscribirItems(string[]arr)
+        public static string comandos;
+        public static List<ConsolaDeMesa> PlaysStationProducts()
+        {
+            List<ConsolaDeMesa> ProductoPS = new List<ConsolaDeMesa>();
+            ConsolaDeMesa ps1 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps2 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps3 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps4 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps5 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps6 = new ConsolaDeMesa("PlayStation 1", 20);
+            ProductoPS.Add(ps1);
+
+            return ProductoPS;
+        }
+        public static void ConfigurarVentana(int ancho, int altura)
+        {
+            Ventana LongitudDeLaVentana = new Ventana(ancho, altura);
+        }
+        public static void DibujarPresentacion()
+        {
+            Interfaz marcoDeLaVentana = new Interfaz(new Point(4,2), new Point(172,50));
+            marcoDeLaVentana.DibujarCuadrado();
+            Console.SetCursorPosition(70,26);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Bienvenido a la tienda \"Consolas Epicas\" ");
+        }
+        public static void DibujarPrimerMenu()
+        {
+            Interfaz marcoDeLaVentana = new Interfaz(new Point(4, 2), new Point(172, 50));
+            Interfaz Contenedor = new Interfaz(new Point(9,9), new Point(167,25));
+            Interfaz titulo1 = new Interfaz(new Point(14, 14), new Point(54, 20));
+            Interfaz titulo2 = new Interfaz(new Point(58, 14), new Point(108, 20));
+            Interfaz titulo3 = new Interfaz(new Point(112, 14), new Point(162, 20));
+            marcoDeLaVentana.DibujarCuadrado();
+            Contenedor.DibujarCuadrado();
+            titulo1.DibujarCuadrado();
+            titulo2.DibujarCuadrado();
+            titulo3.DibujarCuadrado();
+            Console.SetCursorPosition(8, 8);
+            Console.WriteLine("----------Consolas Epicas----------");
+            Console.SetCursorPosition(30, 17);
+            Console.WriteLine("PLAYSTATION");
+            Console.SetCursorPosition(80, 17);
+            Console.WriteLine("XBOX");
+            Console.SetCursorPosition(133, 17);
+            Console.WriteLine("NINTENDO");
+            Console.SetCursorPosition(9,30);
+            for (int i = Contenedor.EsquinaSuperiorIzquierda.X; i<=Contenedor.EsquinaInferiorDerecha.X-79;i++)
+            {
+                Console.Write("═");
+            }
+            Console.SetCursorPosition(9, 31);
+            Console.WriteLine("Ingrese su marca preferida: ");
+            Console.SetCursorPosition(9, 33);
+            comandos = Console.ReadLine().ToLower();
+        }//Usa por primera vez la variable comandos
+        public static void DibujarSegundoMenu()
+        {
+            Interfaz marcoDeLaVentana = new Interfaz(new Point(4, 2), new Point(172, 50));
+            Interfaz tituloDeLaMarca = new Interfaz(new Point(6, 4), new Point(30, 7));
+            Interfaz listaDeItem = new Interfaz(new Point(20, 10), new Point(70, 40));
+            Interfaz listaDeItem2 = new Interfaz(new Point(95, 10), new Point(140, 40));
+            marcoDeLaVentana.DibujarCuadrado();
+            tituloDeLaMarca.DibujarCuadrado();
+            listaDeItem.DibujarCuadrado();
+            listaDeItem2.DibujarCuadrado();
+            Console.SetCursorPosition(140, 4);
+            Console.Write("Ingrese una opción: ");
+            Console.SetCursorPosition(140, 5);
+            Console.Write("Añadir(si)(no): ");
+            switch (comandos)
+            {
+
+            }
+        }
+        public static void EscribirItems(List<ConsolaDeMesa> items)
         {
             Console.SetCursorPosition(40, 9);
             Console.WriteLine("Consolas");
             Console.SetCursorPosition(114, 9);
             Console.WriteLine("Portatiles");
             int y = 12;
-            for(int i = 0; i <(arr.Length/2); i++)
+            for (int i = 0; i < (items.Count / 2); i++)
             {
                 Console.SetCursorPosition(17, y);
-                Console.WriteLine((i+1)+") "+arr[i]);
+                Console.WriteLine((i + 1) + ") " + items[i].Nombre);
                 y += 6;
             }
             y = 12;
-            for (int i = (arr.Length/2); i <arr.Length; i++)
+            for (int i = (items.Count / 2); i < items.Count; i++)
             {
                 Console.SetCursorPosition(97, y);
-                Console.WriteLine((i+1)+") "+arr[i]);
+                Console.WriteLine((i + 1) + ") " + items[i].Nombre);
                 y += 6;
             }
         }
-        public static void DibujarInterfaz()
-        {
-            Cuadrados marcoDeLaVentana = new Cuadrados(new Point(2, 2), new Point(174, 50));
-            Cuadrados tituloDeLaMarca = new Cuadrados(new Point(4,4),new Point(30,7));
-            Cuadrados listaDeItem = new Cuadrados(new Point(15,10), new Point(70,40));
-            Cuadrados listaDeItem2 = new Cuadrados(new Point(95, 10), new Point(140, 40));
-            marcoDeLaVentana.DibujarBorde();
-            tituloDeLaMarca.DibujarBorde();
-            listaDeItem.DibujarBorde();
-            listaDeItem2.DibujarBorde();
-            Console.SetCursorPosition(140,4);
-            Console.Write("Ingrese una opción: ");
-            Console.SetCursorPosition(140, 5);
-            Console.Write("Añadir(si)(no): ");
-
-        }
-        public static void EscribirContenido()
-        {
-            Console.SetCursorPosition(10, 8);
-            Console.WriteLine("------------TIENDA SUPER HELLO----------------");
-            Console.SetCursorPosition(30, 22);
-            Console.Write("PlayStation");
-            Console.SetCursorPosition(75, 22);
-            Console.Write("Xbox");
-            Console.SetCursorPosition(120, 22);
-            Console.Write("Nintendo");
-            Console.SetCursorPosition(10, 34);
-            Console.Write("Ingrese su marca favorita: ");
-            Console.SetCursorPosition(10, 36);
-        }
-        public static void EscribirPresentacion()
-        {
-            Console.SetCursorPosition(70,25);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("¡¡Bienvenido a la tienda de consolas!!");
-            Console.ResetColor();
-            
-        }
         public static void Main()
         {
-            List<ConsolasDeMesa> productos = new List<ConsolasDeMesa>();
-            string[] psp = { "PlayStation 1", "PlayStation 2", "PlayStation 3", "PlayStation 4", "PlayStation Vita", "PlayStation Vita Slim", "PlayStation PSP", "PSPP" };
-            string[] xbox = { "Xbox", "Xbox 360", "xbox one", "Xbox series S" };
-            string[] nin = { "NES", "Game Cube", "Super Nintendo", "Nintendo 64" };
-            Console.Title = "Consolas Epicas - Tienda";
-            string opcion;
-            Ventana ventana = new Ventana(180, 50);
-            Cuadrados marcoDeLaVentana = new Cuadrados(new Point(2, 2), new Point(174, 50));
-            Cuadrados primerMenu = new Cuadrados(new Point(10, 10), new Point(165, 30));
-            Cuadrados tituloPlayStation = new Cuadrados(new Point(15, 20), new Point(55, 25));
-            Cuadrados tituloXbox = new Cuadrados(new Point(60, 20), new Point(100, 25));
-            Cuadrados tituloNintendo = new Cuadrados(new Point(105, 20), new Point(145, 25));
-/*******************************************Primer Pantalla(Presentacion)**********************************************************/
-            marcoDeLaVentana.DibujarBorde();
-            EscribirPresentacion();
-            Thread.Sleep(2000);
-            Console.Clear();
-/*******************************************Segunda Pantalla**********************************************************/
-            marcoDeLaVentana.DibujarBorde();
-            primerMenu.DibujarBorde();
-            tituloPlayStation.DibujarBorde();
-            tituloXbox.DibujarBorde();
-            tituloNintendo.DibujarBorde();
-            EscribirContenido();
-            opcion = Console.ReadLine().ToLower();
-            Console.Clear();
-/*******************************************Tercera Pantalla**********************************************************/
-            DibujarInterfaz();
-            switch (opcion)
-            {
-                case "playstation":
-                    Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    //EscribirItems(psp);
-                    Console.SetCursorPosition(160, 4);
-                    break;
-                case "xbox":
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    //EscribirItems(xbox);
-                    break;
-                case "nintendo":
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    //EscribirItems(nin);
-                    break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("No existe esa opcion");
-                    break;
-            }
+            ConfigurarVentana(180, 52);
+            //DibujarPresentacion();
+            //DibujarPrimerMenu();
+            //DibujarSegundoMenu();
+            //Console.Clear();
+            
+            
             Console.ReadKey();
-
 
         }
     }
