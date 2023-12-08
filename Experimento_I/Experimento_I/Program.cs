@@ -66,12 +66,20 @@ namespace ExperimentoIII
             ConsolaDeMesa Nintendo64 = new ConsolaDeMesa("Nintendo 64", 30);
             ConsolaDeMesa Wii= new ConsolaDeMesa("Wii", 60);
             ConsolaDeMesa Ness= new ConsolaDeMesa("Ness", 90);
+            ConsolaDeMesa GameBoy= new ConsolaDeMesa("Game Boy", 45);
+            ConsolaDeMesa Nswitch = new ConsolaDeMesa("switch", 299);
+            ConsolaDeMesa Nds= new ConsolaDeMesa("Nintendo ds", 399);
             
             ProductoNintendo.Add(GameCube);
             ProductoNintendo.Add(superNintendo );  
             ProductoNintendo.Add(Nintendo64); 
             ProductoNintendo.Add(Wii);
             ProductoNintendo.Add(Ness);
+            ProductoNintendo.Add(GameBoy);
+            ProductoNintendo.Add(Nswitch);
+            ProductoNintendo.Add(Nds);
+            
+            
           
             return ProductoNintendo;
         }
