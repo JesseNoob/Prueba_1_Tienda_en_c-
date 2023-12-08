@@ -32,18 +32,29 @@ namespace ExperimentoIII
         }
          public static List<ConsolaDeMesa> XboxProducts()
         {
-            List<ConsolaDeMesa> ProductoPS = new List<ConsolaDeMesa>();
+            List<ConsolaDeMesa> ProductoXbox = new List<ConsolaDeMesa>();
             ConsolaDeMesa xbox = new ConsolaDeMesa("Xbox", 22);
-            ConsolaDeMesa xbox360 = new ConsolaDeMesa("Xbox 360 ", 30);
-            ConsolaDeMesa xboxOne = new ConsolaDeMesa("Xbox One", 50);
-            ConsolaDeMesa xboxSeriesX = new ConsolaDeMesa("Xbox series x", 69);
-            ConsolaDeMesa xboxSeriesS = new ConsolaDeMesa("Xbox series s", 20);
-            ConsolaDeMesa xboxOneX = new ConsolaDeMesa("Xbox series", 20);
-           ConsolaDeMesa xboxOneXS = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa xbox360 = new ConsolaDeMesa("Xbox 360 ", 50);
+              ConsolaDeMesa xbox360A = new ConsolaDeMesa("Xbox 360 Arcade", 70);
+            ConsolaDeMesa xboxOne = new ConsolaDeMesa("Xbox One", 100);
+            ConsolaDeMesa xboxSeriesX = new ConsolaDeMesa("Xbox series x", 149);
+            ConsolaDeMesa xboxSeriesS = new ConsolaDeMesa("Xbox series s", 200);
+            ConsolaDeMesa xboxOneX = new ConsolaDeMesa("Xbox One x", 299);
+           ConsolaDeMesa xboxOneXS = new ConsolaDeMesa("Xbox One X Slim", 499);
        
-            ProductoPS.Add(ps1);
+            ProductoXbox.Add(xbox);
+              ProductoXbox.Add(xbox360);
+               ProductoXbox.Add(xbox360A);
+              ProductoXbox.Add(xboxOne);
+             ProductoXbox.Add(xboxSeriesX);
+              ProductoXbox.Add(xboxSeriesS);
+              ProductoXbox.Add(xboxSOneX);
+             ProductoXbox.Add(xboxOneXS);
 
-            return ProductoPS;
+             
+
+
+            return ProductoXbox;
         }
         public static void ConfigurarVentana(int ancho, int altura)
         {
