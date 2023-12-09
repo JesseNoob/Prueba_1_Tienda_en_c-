@@ -11,22 +11,20 @@ namespace ExperimentoIII
         public static List<ConsolaDeMesa> PS1productos()
         {
             List<ConsolaDeMesa> ProductoPS = new List<ConsolaDeMesa>();
-            ConsolaDeMesa ps1 = new ConsolaDeMesa("PlayStation 1", 20);
-            ConsolaDeMesa ps2 = new ConsolaDeMesa("PlayStation 1", 20);
-            ConsolaDeMesa ps3 = new ConsolaDeMesa("PlayStation 1", 20);
-            ConsolaDeMesa ps4 = new ConsolaDeMesa("PlayStation 1", 20);
-            ConsolaDeMesa ps5 = new ConsolaDeMesa("PlayStation 1", 20);
-            ConsolaDeMesa ps6 = new ConsolaDeMesa("PlayStation 1", 20);
-            ConsolaDeMesa ps7 = new ConsolaDeMesa("PlayStation 1", 20);
-            ConsolaDeMesa ps8 = new ConsolaDeMesa("PlayStation 1", 20);
+            ConsolaDeMesa ps1 = new ConsolaDeMesa("PlayStation 1", 25);
+            ConsolaDeMesa ps2 = new ConsolaDeMesa("PlayStation 1", 30);
+            ConsolaDeMesa ps3 = new ConsolaDeMesa("PlayStation 1", 100);
+            ConsolaDeMesa ps4 = new ConsolaDeMesa("PlayStation 1", 240);
+            ConsolaDeMesa ps5 = new ConsolaDeMesa("PlayStation 1", 600;
+            ConsolaDeMesa psvita = new ConsolaDeMesa("PlayStation 1", 30);
+            ConsolaDeMesa psp = new ConsolaDeMesa("PlayStation 1", 40);
             ProductoPS.Add(ps1);
             ProductoPS.Add(ps2);
             ProductoPS.Add(ps3);
             ProductoPS.Add(ps4);
             ProductoPS.Add(ps5);
-            ProductoPS.Add(ps6);
-            ProductoPS.Add(ps7);
-            ProductoPS.Add(ps8);
+            ProductoPS.Add(psvita);
+            ProductoPS.Add(psp);
 
             return ProductoPS;
         }
@@ -35,12 +33,12 @@ namespace ExperimentoIII
             List<ConsolaDeMesa> ProductoXbox = new List<ConsolaDeMesa>();
             ConsolaDeMesa xbox = new ConsolaDeMesa("Xbox", 22);
             ConsolaDeMesa xbox360 = new ConsolaDeMesa("Xbox 360 ", 50);
-              ConsolaDeMesa xbox360A = new ConsolaDeMesa("Xbox 360 Arcade", 70);
+            ConsolaDeMesa xbox360A = new ConsolaDeMesa("Xbox 360 Arcade", 70);
             ConsolaDeMesa xboxOne = new ConsolaDeMesa("Xbox One", 100);
             ConsolaDeMesa xboxSeriesX = new ConsolaDeMesa("Xbox series x", 149);
             ConsolaDeMesa xboxSeriesS = new ConsolaDeMesa("Xbox series s", 200);
             ConsolaDeMesa xboxOneX = new ConsolaDeMesa("Xbox One x", 299);
-           ConsolaDeMesa xboxOneXS = new ConsolaDeMesa("Xbox One X Slim", 499);
+            ConsolaDeMesa xboxOneXS = new ConsolaDeMesa("Xbox One X Slim", 499);
        
             ProductoXbox.Add(xbox);
             ProductoXbox.Add(xbox360);
